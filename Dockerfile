@@ -21,7 +21,7 @@ RUN set -eux; \
     echo $TZ > /etc/timezone
 
 # Copy our static executable.
-COPY --from=builder /app /app
+COPY --from=builder /app.jar /app.jar
 
 EXPOSE 8080
 ENV JAVA_OPTS=""
